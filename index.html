@@ -4,91 +4,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gowtham | Data Analyst</title>
+
   <style>
-    body { font-family: 'Times New Roman', serif; margin: 0; padding: 0; color: #ffffff; line-height: 1.6; background: linear-gradient(135deg, #6a8dfd, #af7bff); background-attachment: fixed; }
-    header { background: transparent; padding: 40px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin-top: 8px; font-size: 1.2rem; color: #555; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; }
-    .project { margin-bottom: 20px; }
-    footer { text-align: center; padding: 20px; background: transparent; margin-top: 40px; }
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      background-attachment: fixed;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover { opacity: 0.7; }
+
+    header {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .typing {
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 3s steps(20) infinite alternate;
+    }
+
+    @keyframes typing { 
+      from { width: 0; }
+      to { width: 220px; }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 { border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 10px; }
+
     .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 1.2s ease forwards; }
-  @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-  .typing { border-right:2px solid #fff; white-space:nowrap; overflow:hidden; display:inline-block; animation: typing 3s steps(20) infinite alternate; }
-  @keyframes typing { from { width:0; } to { width:220px; } }
-  a:hover { opacity:0.8; }
-  button { padding:10px 18px; border:none; border-radius:6px; cursor:pointer; }
-  button:hover { opacity:0.85; }
-</style>
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+    .skill-icon { width: 22px; vertical-align: middle; margin-right: 8px; }
+
+    .star-shine { animation: shine 2s infinite ease-in-out; }
+    @keyframes shine { 0% {opacity:0.6;} 50% {opacity:1;} 100% {opacity:0.6;} }
+
+    button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #ffffff;
+      color: #333;
+    }
+    button:hover { opacity: 0.8; }
+
+    footer { text-align: center; padding: 20px; margin-top: 40px; }
+
+  </style>
 </head>
+
 <body>
-  <nav style="display:flex; justify-content:center; gap:30px; padding:15px; position:sticky; top:0; backdrop-filter:blur(6px);">
-    <a href="#about" style="color:#fff; text-decoration:none; font-weight:bold;">About</a>
-    <a href="#projects" style="color:#fff; text-decoration:none; font-weight:bold;">Projects</a>
-    <a href="#contact" style="color:#fff; text-decoration:none; font-weight:bold;">Contact</a>
+
+  <nav>
+    <a href="#About">About</a>
+    <a href="#Skills">Skills</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Contact">Contact</a>
   </nav>
+
   <header>
     <h1>GOWTHAM</h1>
-    <p><span class="typing"></span></p>
-  </header>
+    <p><span class="typing">Data Analyst</span></p>
 
-  <div style="text-align:center; margin-top:20px;">
-    <img src="https://i.imgur.com/1Q9Z1Zm.png" alt="avatar" style="width:130px; height:130px; border-radius:50%; border:3px solid #fff;" />
-  </div>
+    <div style="text-align:center; margin-top:20px;">
+      <img src="https://i.imgur.com/1Q9Z1Zm.png" alt="avatar" style="width:130px; height:130px; border-radius:50%; border:3px solid #fff;">
+    </div>
+  </header>
 
   <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>Write a short introduction about yourself here. For example: I am a data analyst passionate about transforming raw data into meaningful insights that drive decision-making.</p>
+    <p>I am a Data Analyst passionate about transforming raw data into meaningful insights that drive business decisions. I enjoy working with Python, SQL, Excel, Power BI and Tableau to solve real-world problems.</p>
   </section>
 
   <section id="skills" class="fade-in">
     <h2>Skills</h2>
-    <p>Python • SQL • Excel • Power BI • Data Cleaning • Data Visualization • Statistical Analysis</p>
+
+    <p><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"> Python: <span class="star-shine">★★★★☆</span></p>
+    <p><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> SQL: <span class="star-shine">★★★★☆</span></p>
+    <p><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"> Excel: <span class="star-shine">★★★★☆</span></p>
+    <p><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg"> Power BI: <span class="star-shine">★★★☆☆</span></p>
+    <p><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/analytics/analytics-original.svg"> Data Visualization: <span class="star-shine">★★★★☆</span></p>
+    <p><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"> Statistical Analysis: <span class="star-shine">★★★☆☆</span></p>
   </section>
 
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
 
-    <div class="project" style="border:1px solid rgba(255,255,255,0.4); padding:20px; border-radius:10px; margin-bottom:25px; backdrop-filter:blur(4px);">
-      <h3>Project 1 Title (Coming Soon)</h3>
-      <p>Short description of the project, tools used (Python / SQL / Power BI / Excel), and what insights were found.</p>
-      <button style="background:#ffffff; color:#333; margin-top:10px;" disabled>View Project</button>
+    <div class="project" style="padding:20px; border:1px solid rgba(255,255,255,0.4); border-radius:10px; margin-bottom:25px;">
+      <h3>Project 1 (Coming Soon)</h3>
+      <p>Description placeholder</p>
+      <button disabled>View Project</button>
     </div>
 
-    <div class="project" style="border:1px solid rgba(255,255,255,0.4); padding:20px; border-radius:10px; margin-bottom:25px; backdrop-filter:blur(4px);">
-      <h3>Project 2 Title (Coming Soon)</h3>
-      <p>Short description of the project, tools used, and the purpose of the analysis.</p>
-      <button style="background:#ffffff; color:#333; margin-top:10px;" disabled>View Project</button>
+    <div class="project" style="padding:20px; border:1px solid rgba(255,255,255,0.4); border-radius:10px; margin-bottom:25px;">
+      <h3>Project 2 (Coming Soon)</h3>
+      <p>Description placeholder</p>
+      <button disabled>View Project</button>
     </div>
 
-    <div class="project" style="border:1px solid rgba(255,255,255,0.4); padding:20px; border-radius:10px; margin-bottom:25px; backdrop-filter:blur(4px);">
-      <h3>Project 3 Title (Coming Soon)</h3>
-      <p>Short description placeholder. You can replace later when your project is completed.</p>
-      <button style="background:#ffffff; color:#333; margin-top:10px;" disabled>View Project</button>
+    <div class="project" style="padding:20px; border:1px solid rgba(255,255,255,0.4); border-radius:10px;">
+      <h3>Project 3 (Coming Soon)</h3>
+      <p>Description placeholder</p>
+      <button disabled>View Project</button>
     </div>
-
   </section>
 
-  <section id="contact" class="fade-in"> class="fade-in">
-    <form action="mailto:Gowthammm20@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:12px; max-width:400px; margin:auto;">
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+
+    <form action="mailto:Gowthammm20@gmail.com" method="post" enctype="text/plain"
+          style="display:flex; flex-direction:column; gap:12px; max-width:400px; margin:auto;">
+
       <input type="text" name="name" placeholder="Your Name" required style="padding:10px; border-radius:6px; border:none;" />
       <input type="email" name="email" placeholder="Your Email" required style="padding:10px; border-radius:6px; border:none;" />
-      <textarea name="message" placeholder="Your Message" rows="4" style="padding:10px; border-radius:6px; border:none;"></textarea>
-      <button type="submit" style="background:#ffffff; color:#333;">Send Message</button>
+      <textarea name="message" rows="4" placeholder="Your Message"
+                style="padding:10px; border-radius:6px; border:none;"></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
 
-    <div style="text-align:center; margin-top:25px;">
-    <h2>Contact</h2>
-    <p>Email: Gowthammm20@gmail.com</p>
-    <p>LinkedIn: www.linkedin.com/in/gowthammm20</p>
-    <p>GitHub: https://github.com/Gowtham-2805</p>
-    <p style="margin-top:20px; text-align:center;">
-      <button onclick="window.location.href='resume.pdf'" style="background:#ffffff; color:#333;">Download Resume</button>
+    <p style="text-align:center; margin-top:20px;">
+      <button onclick="window.location.href='resume.pdf'">Download Resume</button>
     </p>
-</section>
-<footer>
+
+    <p style="text-align:center; margin-top:20px;">
+      Email: Gowthammm20@gmail.com <br>
+      LinkedIn: www.linkedin.com/in/gowthammm20 <br>
+      GitHub: https://github.com/gowtham-2805
+    </p>
+  </section>
+
+  <footer>
     <p>© 2025 Gowtham</p>
   </footer>
+
 </body>
 </html>
